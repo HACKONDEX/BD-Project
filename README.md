@@ -11,14 +11,14 @@
 
 # Концепруальная
 
-<img src="/models/concept.jpg" alt="">
+<img src="/Models/concept.jpg" alt="">
 
 ## Логическая
 
-<img src="/models/logic.jpg" alt="">
+<img src="/Models/logic.jpg" alt="">
 
 ### Физическая
 
-<img stc="models/phys1.jpg" alt="">
+<img stc="Models/phys1.jpg" alt="">
 
 ***
