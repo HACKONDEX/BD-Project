@@ -15,7 +15,7 @@
 
 ## Логическая
 
-<img src="/Models/logic.jpg" width="100" height="111" alt="">
+<img src="/Models/logic.jpg" width="1000" height="1110" alt="">
 
 ### Физическая
 
