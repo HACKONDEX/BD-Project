@@ -15,10 +15,12 @@
 
 ## Логическая
 
-<img src="/Models/logic.jpg" alt="">
+<img src="/Models/logic.jpg" width="100" height="111" alt="">
 
 ### Физическая
 
-<img stc="Models/phys1.jpg" alt="">
+<img src="Models/phys1.jpg" alt="">
+<img src="Models/phys2.jpg" alt="">
+<img src="Models/phys3.jpg" alt="">
 
 ***
