@@ -1,4 +1,4 @@
-Insert into Holidays.ActivityField(field, diploma)  values
+Insert into Holidays.Activity_Field(field_dsc, diploma_flg)  values
       ('temperature', true)
     , ('temperature', false)
     , ('humidity', true)
@@ -7,19 +7,19 @@ Insert into Holidays.ActivityField(field, diploma)  values
     , ('pressure', false)
     , ('toxicity', true);
 
-Insert into Holidays.Company(name, rating, employees_count) values
+Insert into Holidays.Company(name_nm, rating_rate, employees_cnt) values
       ('Uchiha Evolutions', 9, 7)
     , ('Namikadze Lightnings', 10, 7)
     , ('Stenco Enterpises', 5, 7)
     , ('Dutch meteor station', 7, 7)
     , ('Hakob small startup', 0, 1);
 
-Insert into Holidays.ActivityField(field, diploma)  values
+Insert into Holidays.Activity_Field(field_dsc, diploma_flg)  values
       ('MIPT FIVT student bachelor', false)
     , ('MeteoScience Meteorology', true);
 
 
-Insert into Holidays.ResearchAssociate(fullname, field_id, company_id, happiness) values
+Insert into Holidays.Research_Associate(fullname_nm, field_id, company_id, happiness_pct) values
       ('Hakob Saghatelyan Asaturovich', 8, 5, 100)
     , ('Itachi Uchiha', 1, 1, 20)
     , ('Sasuke Uchiha', 2, 1, 30)
@@ -50,7 +50,7 @@ Insert into Holidays.ResearchAssociate(fullname, field_id, company_id, happiness
     , ('Roman Aliev', 2, 4, 38)
     , ('Arkadiy Arutyunov Borisevich', 1, 4, 83);
 
-Insert into Holidays.City(name, country, company_id, population, happiness) values
+Insert into Holidays.City(name_nm, country_nm, company_id, population_cnt, happiness_pct) values
       ('Rome', 'Italy', 1, 28000000, 70.4)
     , ('Athens', 'Greece', 1, 66400, 30.2)
     , ('San Marino', 'San Marino', 1, 33860, 80.6)

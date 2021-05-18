@@ -1,56 +1,56 @@
 create schema Holidays;
 
-create table Holidays.ActivityField(
+create table Holidays.Activity_Field(
       field_id serial primary key
-    , field varchar(255) not null
-    , diploma boolean not null
+    , field_dsc varchar(255) not null
+    , diploma_flg boolean not null
 );
 
 create table Holidays.Company(
       company_id serial primary key
-    , name varchar(255) not null
-    , rating smallint check (rating >= 0 and rating <= 10)
-    , employees_count integer check (employees_count >= 0)
+    , name_nm varchar(255) not null
+    , rating_rate smallint check (rating_rate >= 0 and rating_rate <= 10)
+    , employees_cnt integer check (employees_cnt >= 0)
 );
 
-create table Holidays.ResearchAssociate(
-      fullname varchar(255) not null
-    , id serial primary key
-    , field_id integer references Holidays.ActivityField(field_id)
+create table Holidays.Research_Associate(
+      fullname_nm varchar(255) not null
+    , id_num serial primary key
+    , field_id integer references Holidays.Activity_Field(field_id)
     , company_id integer references Holidays.Company(company_id)
-    , happiness double precision check (happiness >= 0 and happiness <= 100)
+    , happiness_pct double precision check (happiness_pct >= 0 and happiness_pct <= 100)
 );
 
 create table Holidays.City(
-      name varchar(255) not null
-    , country varchar(255) not null
+      name_nm varchar(255) not null
+    , country_nm varchar(255) not null
     , city_id serial primary key
     , company_id integer references Holidays.Company(company_id)
-    , population integer check (population >= 0)
-    , happiness double precision check (happiness >= 0 and happiness <= 100)
+    , population_cnt integer check (population_cnt >= 0)
+    , happiness_pct double precision check (happiness_pct >= 0 and happiness_pct <= 100)
 );
 
 create table Holidays.Weather(
       weather_id serial primary key
     , description text not null
-    , temperature smallint not null
-    , humidity double precision check (humidity >= 0 and humidity <= 100)
-    , pressure double precision check (pressure >= 0)
-    , toxicity double precision check (toxicity >= 0)
+    , temperature_value smallint not null
+    , humidity_value double precision check (humidity_value >= 0 and humidity_value <= 100)
+    , pressure_value double precision check (pressure_value >= 0)
+    , toxicity_value double precision check (toxicity_value >= 0)
 );
 
 create table Holidays.Day(
       day_id serial primary key
     , weather_id integer references Holidays.Weather(weather_id)
     , city_id integer references Holidays.City(city_id)
-    , workday boolean not null
-    , date date not null
+    , workday_flg boolean not null
+    , date_dt date not null
 );
 
 create table Holidays.Festival(
       festival_id serial primary key
     , day_id integer references Holidays.Day(day_id)
-    , name varchar(255) not null
-    , participants integer check (participants >= 0)
-    , happiness double precision check (happiness >= 0 and happiness <= 100)
-)
+    , name_nm varchar(255) not null
+    , participant_cnt integer check (participant_cnt >= 0)
+    , happiness_pct double precision check (happiness_pct >= 0 and happiness_pct <= 100)
+);
